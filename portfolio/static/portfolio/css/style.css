@@ -24,7 +24,7 @@ header div {
 
 header nav {
     display: flex;
-    justify-contents: flex-end;
+    justify-content: flex-end;
 }
 
 
