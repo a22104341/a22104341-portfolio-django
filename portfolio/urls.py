@@ -1,12 +1,8 @@
 from django.urls import path
-from django.shortcuts import render
 from . import views
 
 app_name = 'portfolio'
 
 urlpatterns = [
-    path('', views.index_view),
-    path('index', views.index_view),
+    path('home', views.home_page_view, name='home'),
 ]
-#hello/urls.py
-from django.shortcuts import render

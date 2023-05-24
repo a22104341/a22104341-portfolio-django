@@ -1,16 +1,19 @@
 <!-- base.html -->
 <html>
-
-<body>
-<header>
+<head>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/layout.css' %}">
+    <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+  <header>
     <div>Título</div>
     <nav>
-        <a href="{% url 'portfolio:home' %}">home</a>
+      <a href="">home</a>
+      <a href="">products</a>
+      <a href="">about</a>
+      <a href="">contact</a>
     </nav>
-</header>
-
+  </header>
 <main>
     {% block main %}
     {% endblock main %}
