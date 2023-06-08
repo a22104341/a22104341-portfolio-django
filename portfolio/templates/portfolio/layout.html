@@ -5,15 +5,16 @@
     <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-  <header>
+<header>
     <div>Título</div>
     <nav>
-      <a href="">home</a>
-      <a href="">products</a>
-      <a href="">about</a>
-      <a href="">contact</a>
+        <a href="{% url 'portfolio:home' %}">home</a>
+        <a href="">products</a>
+        <a href="">about</a>
+        <a href="{% url 'portfolio:blog' %}">Blog</a>
+        <a href="">contact</a>
     </nav>
-  </header>
+</header>
 <main>
     {% block main %}
     {% endblock main %}
