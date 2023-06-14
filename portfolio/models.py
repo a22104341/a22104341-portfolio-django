@@ -42,9 +42,9 @@ class Area(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=250, null=False)
     content = models.TextField(max_length=1000, null=False)
-    createdAt = models.DateTimeField(auto_now_add=True, null=False)
     area = models.ForeignKey(Area, null=False,  on_delete=models.CASCADE)
-    author = models.ManyToManyField(Author, related_name='article')
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+    author = models.ManyToManyField(Author, related_name='article_author')
 
     def __str__(self):
         return self.title
@@ -52,7 +52,6 @@ class Article(models.Model):
 
 class Comment(models.Model):
     text = models.TextField()
-    createdAt = models.DateTimeField(auto_now_add=True, null=False)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -60,7 +59,7 @@ class Comment(models.Model):
 
 
 class Like(models.Model):
-    article = models.OneToOneField(Article, on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
     count = models.IntegerField(default=0, null=False)
 
     def __str__(self):

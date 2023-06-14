@@ -1,0 +1,10 @@
+
+{% block main %}
+
+<h2>Registration Form</h2>
+<form action="{% url 'portfolio:create-article' %}" method="POST" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Author
+from .models import Author, Article, Comment
 
 
 class AuthorForm(ModelForm):
@@ -16,4 +16,24 @@ class AuthorForm(ModelForm):
                                                   'type': 'text'}),
             'birthdate': forms.DateInput(attrs={'class': 'form-control', 'onfocus': "(this.type='date')"}),
             'verified': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+        }
+
+
+class ArticleForm(ModelForm):
+    class Meta:
+        model = Article
+        fields = '__all__'
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
+            'content': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Write your Content Here'}),
+        }
+
+
+class CommentForm(ModelForm):
+    class Meta:
+        model = Comment
+        fields = '__all__'
+
+        widgets = {
+            'text': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Write your comment'}),
         }
