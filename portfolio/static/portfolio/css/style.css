@@ -7,7 +7,7 @@
 
 header {
     height: 10vh;
-    background: purple;
+    background: #6aa1fd;
     color: white;
     top: 0;
 
@@ -32,13 +32,13 @@ nav a {
     padding: 0 1em;
     text-decoration: none;
     font-size: 1rem;
-    color: lightgray;
+    color: white;
 }
 
 
 main {
     height: 85vh;
-    background-color: grey;
+    background-color: whitesmoke;
     padding: 4em 4em;
 }
 
@@ -48,4 +48,6 @@ footer {
     justify-content: flex-end;
     padding: 0 2vw;
     align-items: center;
+    background-color: #6aa1fd;
+    color:white;
 }

@@ -16,6 +16,6 @@ def author_register_page_view(request):
     form = AuthorForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('tarefas:home')
+        return redirect('portfolio:blog')
     context = {'form': form}
     return render(request, 'portfolio/register-author.html', context)

@@ -43,8 +43,8 @@ class Article(models.Model):
     title = models.CharField(max_length=250, null=False)
     content = models.TextField(max_length=1000, null=False)
     createdAt = models.DateTimeField(auto_now_add=True, null=False)
-    area = models.ForeignKey(Area,null=False,  on_delete=models.CASCADE)
-    author = models.ManyToManyField(Author, null=False, related_name='article')
+    area = models.ForeignKey(Area, null=False,  on_delete=models.CASCADE)
+    author = models.ManyToManyField(Author, related_name='article')
 
     def __str__(self):
         return self.title
