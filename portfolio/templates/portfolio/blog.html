@@ -1,10 +1,23 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-<h3>Titulo</h3>
-<p>texto texto texto texto texto texto texto </p>
+<p style="font-size: 70px; font-weight: bold">Blog</p><br>
+<p>Create authors and Articles </p>
 
 {% load static %}
+<br>
 <button><a href="{% url 'portfolio:register-author' %}"> Register Author</a></button>
 <button><a href="{% url 'portfolio:create-article' %}"> Create Article</a></button>
+<br><br>
+{% for article in articles %}
+<div>
+    <h1>{{article.title}}</h1>
+    <p>{{article.content}}</p>
+    <p>Authors:</p>
+    {% for author in article.author.all %}
+    <p>{{article.author}}</p>
+    {% endfor %}
+    <br><br>
+    {% endfor %}
+</div>
 {% endblock %}

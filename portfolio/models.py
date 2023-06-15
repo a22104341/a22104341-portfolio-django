@@ -65,3 +65,8 @@ class Like(models.Model):
     def __str__(self):
         return f"{self.article.title} - Likes: {self.count}"
 
+#class Login(models.Model):
+    #userName = models.TextField(null=False),
+    #passWord = models.TextField(null=False),
+
+    #if userName == "admin" and passWord == "admin":
