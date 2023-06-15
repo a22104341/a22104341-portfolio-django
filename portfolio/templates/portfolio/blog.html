@@ -6,8 +6,8 @@
 
 {% load static %}
 <br>
-<button><a href="{% url 'portfolio:register-author' %}"> Register Author</a></button>
-<button><a href="{% url 'portfolio:create-article' %}"> Create Article</a></button>
+<button style="padding: 10px;background-color: turquoise;border-radius: 5px;"><a href="{% url 'portfolio:register-author' %}" style="text-decoration: none"> Register Author</a></button>
+<button style="padding: 10px;background-color: turquoise;border-radius: 5px;"><a href="{% url 'portfolio:create-article' %}" style="text-decoration: none"> Create Article</a></button>
 <br><br>
 {% for article in articles %}
 <div>

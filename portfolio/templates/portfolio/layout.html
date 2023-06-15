@@ -3,29 +3,64 @@
 <head>
     <title>Diogo Rodrigues</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
 <body>
-<header>
-    <div>Diogo Rodrigues</div>
-    <nav>
-        <a href="{% url 'portfolio:home' %}">Home</a>
-        <a href="{% url 'portfolio:video' %}">VideoPage</a>
-        <a href="http://diogorodriguesa22104341.pythonanywhere.com/" target="_blank">Otherprojects</a>
-        <a href="{% url 'portfolio:blog' %}">Blog</a>
-        <a href="">Login</a>
-    </nav>
-</header>
+
+<nav id="nav">
+    <div class="dropdown">
+        <button class="dropbtn" id="dropbtn">About me</button>
+        <div class="dropdown-content">
+            <a href="{% url 'portfolio:home' %}" id="dropdown-content">Home</a>
+            <a href="{% url 'portfolio:education' %}" id="dropdown-content1">Education & Experience</a>
+            <a href="{% url 'portfolio:video' %}" id="dropdown-content3">Video Page</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" id="dropbtn1">Projects</button>
+        <div class="dropdown-content">
+            <a href="{% url 'portfolio:University' %}">University</a>
+            <a href="http://diogorodriguesa22104341.pythonanywhere.com/" target="_blank">Personal</a>
+            <a href="{% url 'portfolio:interesting' %}">Interesting (not made by me)</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" id="dropbtn2">Requested pelo enunciado</button>
+        <div class="dropdown-content">
+            <a href="{% url 'portfolio:ProgWeb' %}">Programação Web(labs / news)</a>
+            <a href="{% url 'portfolio:JavaScriptPlayground' %}">Javascript Playground</a>
+            <a href="{% url 'portfolio:SiteMap' %}">SiteMap</a>
+            <a href="{% url 'portfolio:blog' %}">Blog</a>
+        </div>
+    </div>
+    <div class="darkmode">
+        <button onclick="darkLightMode()" style="background-color: transparent;border-width: 0;">
+            <img id="darkLight" src="{% static 'portfolio/images/darkmode.png' %}" style="height: 25px;">
+        </button>
+    </div>
+</nav>
+
 <main>
+    <br><br><br><br>
     {% block main %}
+
     {% endblock main %}
+    <br><br><br>
 </main>
 
-<footer>
+<footer id="footer">
+    <div><a href="SiteMap.html" id="f1" style="text-decoration: none;color: black;">SiteMap</a></div>
+    <div><a href="Contact.html" id="f2" style="text-decoration: none;color: black;">Contact Me</a></div>
+    {% load static %}
     <div><a href="https://www.linkedin.com/in/diogo-rodrigues-687643232/" id="f3"
-            style="text-decoration: none;position: relative;color: black;" target="_blank">LinkedIn</a></div>
-    <div><a href="https://github.com/a22104341" style="color:black;text-decoration: none;" target="_blank">Github</a></div>
-    <div id="date" style="color: black">2023</div>
+            style="text-decoration: none;position: relative;bottom:8px;color: black;" target="_blank">Linked<img
+            src="{% static 'portfolio/images/linkedInLOGO.png' %}"
+            style="height: 29px;position:relative; bottom: -8px;"></a></div>
+    <div><a href="https://github.com/a22104341" style="text-decoration: none;" target="_blank"><img
+            src="{% static 'portfolio/images/Github.png' %}" id="f4"
+            style="height: 28px;position: relative;bottom: -2px;"></a></div>
+    <div id="date">2023</div>
+    <div><img src="{% static 'portfolio/images/lusofona.png' %}" style="height: 28px;" id="f5"></div>
 </footer>
 </body>
 </html>

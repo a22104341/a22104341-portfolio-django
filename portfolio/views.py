@@ -6,15 +6,43 @@ from .models import Article
 
 
 def home_page_view(request):
-    return render(request, 'portfolio/home.html')
+    return render(request, 'portfolio/index.html')
 
 
 def video_page_view(request):
     return render(request, 'portfolio/video.html')
 
 
+def education_create_page_view(request):
+    return render(request, 'portfolio/Education.html')
+
+
+def interesting_create_page_view(request):
+    return render(request, 'portfolio/Interesting.html')
+
+
+def javaScriptPlayground_create_page_view(request):
+    return render(request, 'portfolio/JavaScriptPlayground.html')
+
+
+def Personal_create_page_view(request):
+    return render(request, 'portfolio/Personal.html')
+
+
+def ProgWeb_create_page_view(request):
+    return render(request, 'portfolio/ProgWeb.html')
+
+
+def University_create_page_view(request):
+    return render(request, 'portfolio/University.html')
+
+
+def SiteMap_create_page_view(request):
+    return render(request, 'portfolio/SiteMap.html')
+
+
 def blog_page_view(request):
-    context={"articles":Article.objects.all()}
+    context = {"articles": Article.objects.all()}
     return render(request, 'portfolio/blog.html', context)
 
 
@@ -34,5 +62,3 @@ def article_create_page_view(request):
         return redirect('portfolio:blog')
     context = {'form': form}
     return render(request, 'portfolio/create-article.html', context)
-
-
