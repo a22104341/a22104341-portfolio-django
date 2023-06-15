@@ -1,0 +1,1015 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    animation: mouse_link 1s;
+    -o-animation: mouse_link 1s;
+    -ms-animation: mouse_link 1s;
+    -moz-animation: mouse_link 1s;
+    -webkit-animation: mouse_link 1s;
+
+    animation-iteration-count: infinite;
+}
+
+button {
+    animation: mouse_link 1s;
+    -o-animation: mouse_link 1s;
+    -ms-animation: mouse_link 1s;
+    -moz-animation: mouse_link 1s;
+    -webkit-animation: mouse_link 1s;
+
+    animation-iteration-count: infinite;
+}
+
+body {
+    animation: mouse_in 0.75s;
+    -o-animation: mouse_in 0.75s;
+    -ms-animation: mouse_in 0.75s;
+    -moz-animation: mouse_in 0.75s;
+    -webkit-animation: mouse_in 0.75s;
+
+    animation-iteration-count: infinite;
+
+    display: flex;
+}
+
+.backgroundME {
+    background-image: url("../images/backgroundME.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    height: 90vh;
+}
+
+#siteMAPPPP{
+    height: 85vh;
+    align-items: center;
+}
+
+@keyframes mouse_in {
+    0% {
+        cursor: url('../images/1.png'), default;
+    }
+
+    33% {
+        cursor: url('../images/2.png'), default;
+    }
+
+    66% {
+        cursor: url('../images/3.png'), default;
+    }
+
+    100% {
+        cursor: url('../images/4.png'), default;
+    }
+}
+
+@keyframes mouse_link {
+    0% {
+        cursor: url('../images/5.png'), default;
+    }
+
+    14.3% {
+        cursor: url('../images/6.png'), default;
+    }
+
+    29% {
+        cursor: url('../images/7.png'), default;
+    }
+
+    43.5% {
+        cursor: url('../images/8.png'), default;
+    }
+
+    59% {
+        cursor: url('../images/9.png'), default;
+    }
+
+    73% {
+        cursor: url('../images/10.png'), default;
+    }
+
+    87% {
+        cursor: url('../images/11.png'), default;
+    }
+
+    100% {
+        cursor: url('../images/12.png'), default;
+    }
+}
+
+
+header {
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-attachment: fixed;
+}
+
+main {
+    align-items: center;
+    text-align: center;/* THIS IS NOT THE CENTER */
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+
+    background-color: lightblue;
+    height: 80px;
+
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(143, 203, 223, 0.377);
+
+    z-index: 999;
+
+    position:fixed;
+    width: 100%;
+    top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: space-evenly;
+}
+
+/*dropDownStuff */
+.dropbtn {
+    background-color: lightblue;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f0ffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(154, 194, 207);
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+
+    background-color: lightblue;
+    height: 60px;
+    width: 100%;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(143, 203, 223, 0.377);
+
+    z-index: 999;
+    position: fixed;
+    bottom:0;
+    justify-content: space-evenly;
+}
+
+.container .curso {
+    grid-area: curso;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    z-index: 0;
+}
+
+article.phrase {
+    display: flex;
+    grid-area: phrase;
+
+    font-size: 20px;
+
+    justify-content: center;
+
+    background-color: lightblue;
+
+    width: 450px;
+
+    height: 35vh;
+    background: lightblue;
+    padding: 0 4vw;
+    text-align: center;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(143, 203, 223, 0.377);
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    bottom: -170px;
+    right: 0;
+    left: 0;
+
+}
+
+article.phrase button {
+    height: 50px;
+    width: 110px;
+
+    font-size: 20px;
+
+    border-color: aqua;
+    /*choose a better color */
+    background-color: green;
+    /*choose a better color */
+    border-radius: 5px;
+
+
+
+
+
+}
+
+/* put in middle */
+
+nav .darkmode {
+    position: absolute;
+    right: 0;
+    margin-right: 35px;
+}
+
+article.qualities_etc {
+    height: 1000px;
+    background-image: url("../images/Austria_White.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    align-items: start;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* progressBars */
+article.qualities_etc .progressBars {
+    box-sizing: border-box;
+    margin-left: 32.5%;
+
+}
+
+.progressBars .progressBar1 {
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+
+.progressBar1::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(100% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
+
+.progressBars .progressBar4 {
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+
+.progressBar4::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(100% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
+
+.progressBars .progressBar2 {
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+
+.progressBar2::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(97% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
+
+.progressBars .progressBar3 {
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+
+.progressBar3::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(40% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
+
+/* got a problem w the small background*/
+/* PHONE VERSION, FOOTER ON TOP NOT SPOSED */
+
+/* nav animation while hovering */
+.dropdown {
+    display: inline-block;
+    position: relative;
+    color: rgb(124, 161, 173);
+}
+
+.dropdown:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(124, 161, 173);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.dropdown:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Here start Other pages */
+
+/* Education */
+.EduParallax {
+    /* The image used */
+    background-image: url("../images/Austria_White.png");
+
+    /* Set a specific height */
+    min-height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    justify-content: center;
+    margin-left: auto;
+
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Education {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+
+}
+
+#WorkExperience {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+
+}
+
+.work {
+    /* work and edu are switched */
+    background-image: url("../images/Education.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* personal */
+#OOF {
+    display: flex;
+    font-size: 120px;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    flex-direction: column;
+    word-spacing: 20px;
+    font-weight: bold;
+}
+
+/* ProgWeb */
+#ProgWeb {
+    height: 85vh;
+}
+
+#ProgWeb {
+    background-color: rgb(238, 248, 248);
+    display: flex;
+    justify-content: center;
+    padding: 25px 100px;
+}
+
+#ProgWeb {
+    display: flex;
+    flex-direction: row;
+    grid-template-areas:
+        'lab news';
+    height: 100%;
+}
+
+#ProgWeb>div>a {
+    display: flex;
+    width: 250px;
+    height: 100px;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-decoration: none;
+    color: black;
+}
+
+#ProgWeb>div>div > a {
+    display: flex;
+    width: 250px;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+#NewsText{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+#lab {
+}
+
+#News div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+#ProgWeb>div>div {
+    font-size: 40px;
+}
+
+#ProgWeb #News>a {
+    position: relative;
+}
+
+/* Interesting */
+
+.container .capitais {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: space-around;
+    background-color: white;
+    padding: 50px;
+    color: #000;
+}
+
+.container .capitais>div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #888888;
+    margin: 10px;
+}
+
+.container .capitais img {
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .capitais div div:last-child {
+    width: 380px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .capitais div p {
+    margin: 20px;
+}
+
+/* JavaScriptPlayground */
+.javaIMAGECONTAINER {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    width: 50%;
+    justify-items: center;
+
+}
+
+.inputBOX {
+    position: absolute;
+    border-color: black;
+    border-width: 5px;
+    height: 20px;
+    width: 600px;
+    bottom: 4px;
+    left: 0;
+    z-index: 9;
+}
+
+#sentenceOnTop {
+    position: absolute;
+    border-color: lightblue;
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 600px;
+    z-index: 99999999999;
+}
+
+.containerJAVA {
+    position: relative;
+    height: 100vh;
+}
+
+.threespots {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.output-name {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    margin: 50px;
+}
+
+.output-name.top-left {
+    top: 10%;
+    right: 10%;
+}
+
+.output-name.middle-right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.output-name.bottom {
+    bottom: 10%;
+    text-align: center;
+}
+
+#input-name {
+    width: 100%;
+    max-width: 400px;
+    /* Set a maximum width to limit the size of the input box */
+    margin: 0 auto;
+    /* Center the input box horizontally */
+    padding: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+
+
+#circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    animation: roll 10s linear infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(calc(100vw - 50px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+.calculator {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+}
+
+.inputMath {
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.number {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.number:hover {
+    background-color: #3e8e41;
+}
+
+.number:active {
+    background-color: #297a38;
+}
+
+.operator {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.operator:hover {
+    background-color: #3e8e41;
+}
+
+.operator:active {
+    background-color: #297a38;
+}
+
+.equal {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.equal:hover {
+    background-color: #3e8e41;
+}
+
+.equal:active {
+    background-color: #297a38;
+}
+
+.delete {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.delete:hover {
+    background-color: #3e8e41;
+}
+
+.delete:active {
+    background-color: #297a38;
+}
+
+/* pseudo classes etc. have been created in the other labs that are included in this portfolio and been adapted + > */
+
+.ProjectKeeper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.Project1{ /* Mines */
+    display: flex;
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    left: 15%;
+
+}
+.Project2{ /* Eddie */
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    right: 10%;
+    margin-top: -3%;
+    z-index: 2;
+}
+.Project3{ /* Grades */
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    margin-left: 37%;
+    margin-top: 3%;
+}
+
+#contactStuff{
+    justify-content: center;
+    justify-items: center;
+    padding: 18%;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    margin-left: 28%;
+    height: 70vh;
+}
+.container #feet{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+.LeNav{
+    width: 100%;
+}
+
+@media only screen and(max-width: 1485px) {
+    .NavCrack{
+        width: 100%;
+    }
+}
+
+
+/*@media only screen and(max-width: 600px) {
+    .container {
+        display: grid;
+
+        grid-template-areas:
+            'nav'
+            'header'
+            'curso'
+            'phrase'
+            'main'
+            'skills'
+            'footer';
+
+        grid-template-columns: 1fr;
+    }
+
+    .container .curso {
+        font-size: 28px;
+    }
+
+    .backgroundME {
+        background-image: url("../images/phone 3.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+
+    article.qualities_etc {
+        height: 1000px;
+        width: 100%;
+        background-image: url("../images/Austria_White.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        align-items: start;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    #eduparallax{
+        font-size: 25px;
+        height: 600px;
+    }
+
+    #dropbtn2 {
+        display: flex;
+        margin-right: 30%;
+    }
+
+    #contactStuff{ /* currently not working */
+/*        display: flex;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    #contactStuff{
+        justify-content: center;
+        justify-items: center;
+        font-size: large;
+
+        display: flex;
+        flex-direction: column;
+        display: block;
+        margin-top: 25%;
+        margin-left: 30%;
+        height: 100vh;
+        font-size: 50px;
+    }
+    .container #feet{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .Project1{
+        height: 50px;
+        width: 50px;
+    }
+    .Project2{
+        height: 50px;
+        width: 50px;
+    }
+    .Project3{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        left:0;
+
+    }
+
+    *{
+        font-size: 30px;
+    }
+
+    #leMapSite{
+        width: 10%;
+    }
+
+}*/
