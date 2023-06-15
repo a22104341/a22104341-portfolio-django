@@ -4,6 +4,7 @@
     <title>Diogo Rodrigues</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="icon" href="{% static 'portfolio/images/UlmFlagge.png' %}">
 </head>
 <body>
 
@@ -49,9 +50,7 @@
 </main>
 
 <footer id="footer">
-    <div><a href="SiteMap.html" id="f1" style="text-decoration: none;color: black;">SiteMap</a></div>
-    <div><a href="Contact.html" id="f2" style="text-decoration: none;color: black;">Contact Me</a></div>
-    {% load static %}
+    <div><a href="{% url 'portfolio:SiteMap' %}" id="f1" style="text-decoration: none;color: black;">SiteMap</a></div>
     <div><a href="https://www.linkedin.com/in/diogo-rodrigues-687643232/" id="f3"
             style="text-decoration: none;position: relative;bottom:8px;color: black;" target="_blank">Linked<img
             src="{% static 'portfolio/images/linkedInLOGO.png' %}"

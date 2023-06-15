@@ -1,10 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
-<body>
+{% block main %}
+<div class="container">
+    <main id="ProgWeb">
+        <div id="lab">
+            <div>Labs</div>
+            <a href="http://diogorodriguesa22104341.pythonanywhere.com/oldLabs/index.html" target="_blank"><u>Lab1</u> Here i was introduced to HTML and made a Website about the City
+                I used to live in(this is unfortunately lab2 already because Lab1 doesnt exist anymore)</a>
+            <a href="http://diogorodriguesa22104341.pythonanywhere.com/oldLabs/index.html" target="_blank"><u>Lab2</u> This is the continuation of Lab1, but now CSS gets applied to
+                make the Website look better</a>
+            <a href="http://diogorodriguesa22104341.pythonanywhere.com/oldLabs/lab3/lab3index.html" target="_blank" style="font-size: 15px"><u>Lab3</u> All the concepts that have been learned beforehand
+                were applied and on this Lab, grid and flexbox were added to create a more dinamic website with
+                travelling as its theme</a>
+            <a href="http://diogorodriguesa22104341.pythonanywhere.com/oldLabs/lab4/indexLab4.html" target="_blank" ><u>Lab4</u> Here I have implemented tools such as the parallax
+                effect and animations, to create a responsive website</a>
+        </div>
 
-</body>
-</html>
+        <div>
+            <div id="News">News</div>
+            <div id="NewsText">
+                <a target="_blank"
+                   href="https://levelup.gitconnected.com/why-i-keep-failing-candidates-during-google-interviews-dc8f865b2c19"><u>Why
+                    I Keep Failing Candidates During Google Interviews…</u><br>Ken Mazaika discusses the common
+                    mistakes
+                    made by candidates during technical interviews.</a>
+                <a target="_blank" href="https://kozyrkov.medium.com/how-ai-is-evolving-9638e7eae9f1"><u>How AI is
+                    Evolving</u>
+                    Cassie Kozyrkov shares her insights on the evolution of AI. Kozyrkov discusses the transition
+                    from rule-based systems to machine learning and deep learning.</a>
+                <a target="_blank"
+                   href="https://uxdesign.cc/my-first-layoff-was-the-best-thing-that-could-happen-to-my-career-b3250a0fa7ba"><u>My
+                    First Layoff Was the Best Thing That Could Happen to My Career</u>UX Designer, Eileen Huang,
+                    tells her story of being laid off and how it ultimately led to career growth.</a>
+                <a target="_blank"
+                   href="https://mark-riedl.medium.com/a-very-gentle-introduction-to-large-language-models-without-the-hype-5f67941fa59e"><u>A
+                    Very Gentle Introduction to Large Language Models (Without the Hype)</u>Mark Riedl provides
+                    an overview of large language models and their potential applications.</a>
+                <a target="_blank"
+                   href="https://open.nytimes.com/bringing-dark-mode-to-our-news-apps-409266136ed4"><u>Bringing
+                    Dark Mode to our News Apps</u>The New York Times' engineering team shares the process of
+                    implementing Dark Mode on their news apps.</a>
+                <a target="_blank"
+                   href="https://obie.medium.com/my-kids-and-i-just-played-d-d-with-chatgpt4-as-the-dm-43258e72b2c6"><u>My
+                    Kids and I Just Played D&D with ChatGPT4 as the DM</u>Obie Fernandez describes his
+                    experience playing Dungeons & Dragons with a language model as the Dungeon Master.</a>
+                <a target="_blank"
+                   href="https://szopa.medium.com/teaching-chatgpt-to-speak-my-sons-invented-language-9d109c0a0f05"><u>Teaching
+                    ChatGPT to Speak My Son's Invented Language</u>Michal Szopa shares his experiment of
+                    training GPT-3 to understand and generate text in his son's unique language.</a>
+                <a target="_blank"
+                   href="https://medium.com/@ConversationUS/ai-isnt-close-to-becoming-sentient-the-real-danger-lies-in-how-easily-we-re-prone-to-b767c96552a2"><u>AI
+                    isn’t close to becoming sentient — the real danger lies in how easily we’re prone to
+                    anthropomorphize it</u>The article argues that our own cognitive biases and the way they can
+                    be amplified by AI</a>
+                <a target="_blank"
+                   href="https://abby-mitchell.medium.com/its-international-women-s-day-and-quantum-has-a-long-way-to-go-a338760028db"><u>It's
+                    International Women's Day and Quantum Has a Long Way to Go</u>Abby Mitchell addresses the
+                    issue of gender disparity in the field of quantum computing.</a>
+                <a target="_blank" href="https://wilw.medium.com/time-enough-at-last-9c09cc478f2b"><u>Time Enough at
+                    Last</u>Actor and writer Wil Wheaton shares his experience of the COVID-19 pandemic and the
+                    impact it had on his life.</a>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

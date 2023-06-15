@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
-<body>
+{% block main %}
+<div class="container">
+    <div class="EduParallax" id="eduparallax">
+        <div id="WorkExperience">Work Experience</div>
+        <div>
+            <br><br><br>
+            <b>Internship</b> <br>
+            Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg [ 07/2019 – 07/2019 ]
+            <br>
+            City: Ulm <br>
+            Country: Germany
+        </div>
+    </div>
 
-</body>
-</html>
+
+    <div class="work" id="work">
+        <div id="Education">Education</div>
+        <div>
+            <br><br><br>
+            <b> Engineering, BSc <br>
+                Universidade Lusófona de Humanidades e Tecnologias [ 2021 – Current ]</b> <br>
+            Address: Lisbon (Portugal)
+            <br><br>
+            <b> International Abitur <br>
+                Escola Alemã de Lisboa/Deutsche Schule Lissabon [ 2019 – 2021 ] </b><br>
+            Address: Lisbon (Portugal)
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

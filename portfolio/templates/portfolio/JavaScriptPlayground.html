@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
-<body>
+{% block main %}
+{% block content %}
+<script src="{% static 'portfolio/javascript/Playground.js' %}"></script>
+<div class="containerJAVA">
+    <div class="javaIMAGECONTAINER">
+        <img src="{% static 'portfolio/images/gravityFalls.png' %}" style="width:100%; height:100%">
+        <input type="text" class="inputBOX" id="leTextBox" placeholder="Write a Sentence about this picture">
+        <div id="sentenceOnTop"></div>
+    </div>
 
-</body>
-</html>
+    <div class="threespots">
+        <input id="input-name" type="text" maxlength="20" placeholder="Write a name in here">
+        <p class="output-name top-left"></p>
+        <p class="output-name middle-right"></p>
+        <p class="output-name bottom"></p>
+    </div>
+
+    <div id="circle"></div>
+
+    <!-- calculator -->
+    <div class="calculator">
+        <div class="display">
+            <input type="text" class="inputMath" id="inputMath" placeholder="0">
+        </div>
+        <div class="buttons">
+            <button class="number" value="7">7</button>
+            <button class="number" value="8">8</button>
+            <button class="number" value="9">9</button>
+            <button class="operator" value="/">/</button>
+            <button class="number" value="4">4</button>
+            <button class="number" value="5">5</button>
+            <button class="number" value="6">6</button>
+            <button class="operator" value="*">*</button>
+            <button class="number" value="1">1</button>
+            <button class="number" value="2">2</button>
+            <button class="number" value="3">3</button>
+            <button class="operator" value="-">-</button>
+            <button class="number" value="0">0</button>
+            <button class="operator" value=".">.</button>
+            <button class="equal" id="equal">=</button>
+            <button class="operator" value="+">+</button>
+            <button class="delete" id="delete">DEL</button>
+        </div>
+    </div>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow"/>
+        <circle cx="30" cy="35" r="5" fill="black"/>
+        <circle cx="70" cy="35" r="5" fill="black"/>
+        <path d="M 35 65 Q 50 80 65 65" stroke="black" stroke-width="4" fill="none"/>
+    </svg>
+    <br><br><br><br><br><br>
+</div>
+{% endblock %}
+{% endblock %}

@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
-<body>
-
-</body>
-</html>
+{% block main %}
+<div class="container">
+    <main id="siteMAPPPP">
+            <img src="{% static 'portfolio/images/SiteMap.svg' %}" id ="leMapSite">
+    </main>
+</div>
+{% endblock %}

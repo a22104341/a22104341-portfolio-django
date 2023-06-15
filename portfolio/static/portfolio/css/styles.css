@@ -49,7 +49,7 @@ body {
 
 #siteMAPPPP{
     height: 85vh;
-    align-items: center;
+    margin-top: 10%;
 }
 
 @keyframes mouse_in {
@@ -498,9 +498,6 @@ article.qualities_etc .progressBars {
 }
 
 /* ProgWeb */
-#ProgWeb {
-    height: 85vh;
-}
 
 #ProgWeb {
     background-color: rgb(238, 248, 248);
@@ -515,6 +512,12 @@ article.qualities_etc .progressBars {
     grid-template-areas:
         'lab news';
     height: 100%;
+    width: 86.7%;
+}
+
+div#lab {
+    position: relative;
+    margin-top: -6.5%;
 }
 
 #ProgWeb>div>a {
@@ -562,6 +565,7 @@ article.qualities_etc .progressBars {
 }
 
 #lab {
+
 }
 
 #News div{
@@ -585,7 +589,6 @@ article.qualities_etc .progressBars {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: space-around;
     background-color: white;
     padding: 50px;
     color: #000;
@@ -856,7 +859,7 @@ article.qualities_etc .progressBars {
 .ProjectKeeper{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80%;
 }
 
 .Project1{ /* Mines */
@@ -879,7 +882,7 @@ article.qualities_etc .progressBars {
     position: absolute;
     height: 650px;
     width: 650px;
-    margin-left: 37%;
+    margin-left: -17%;
     margin-top: 3%;
 }
 

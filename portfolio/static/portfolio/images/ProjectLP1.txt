@@ -1,0 +1,393 @@
+#include <stdio.h>
+#define disciplinas " 0 - Arquitetura de Computadores\n 1 - Álgebra Linear\n 2 - Algoritmia e Estrutura de Dados\n 3 - Competências Comportamentais\n 4 - Física\n 5 - Linguagens de Programação\n 6 - Matemática 2\n"
+#define restartMenu " 0 - Calcular nota para outra disciplina\n 1 - Ver as notas\n 2 - Trocar de utilizador\n 3 - Sair\n"
+
+int main(void) 
+{
+  int option = -1, loop = 1;
+  
+  int loginSignUP = -1, loginCredentials = -1, saved = -1, correctlogin = 0, classChosen = -1, restart = 1, class = -1, pos = 0;
+  int classes[7] = {0};
+  int students[5] = {0};
+
+  /*Arquitetura de Computadores*/
+  int f1 = -1, f2 = -1, exameAC = -1, acTeorica = -1, t1 = -1, t2 = -1, t3 = -1, t4 = -1, ac = -1, exameORfrequencia = -1, acPratica = -1;
+
+  /*Álgebra Linear*/
+  int exameAlgebra = -1, algebraTotal = -1;
+  float tpc1 = -1, tpc2 = -1, tpc3 = -1, tpc4 = -1, algebraPratica = -1;
+
+  /*Algoritmia e Estrutura de Dados*/
+  float minificha1 = -1, minificha2 = -1, fichasDropProject = -1, projetoParte1 = -1, projetoParte2 = -1, projetoTotal = -1;
+  float TPC1 = -1, TPC2 = -1, TPC3 = -1, TPC4 = -1, quizzes = -1, AEDfrequencia1 = -1, AEDfrequencia2 = -1, AEDexame = -1, TPCtotal = -1, praticaAED = -1, teoricaAED = -1;
+  int AED = -1, AEDfreqORexam = -1;
+
+  /*Competências Comportamentais */
+  int CCfrequencia = -1, trabalhoDeGrupo = -1, trabalhoIndividual = -1, CCexame = -1, CCtotal = -1, CC = -1;
+
+  /*Física*/
+  float F1 = -1, F2 = -1, F3 = -1, F4 = -1, F5 = -1;
+  int exameFisica = -1, totalFisica = -1;
+  
+  /*Linguagens de Programação 1*/
+  float  Ex0 = -1, Ex1 = -1, Ex2 = -1, Ex3 = -1, Ex4 = -1, Ex5 = -1, classroom = -1, projeto = -1;
+  float LPfrequencia1 = -1, LPfrequencia2 = -1, LPexame = -1;
+  int LPpratica = -1, LPteorica = -1, LP = -1, LPfreqORexam = -1;
+
+  /*Matemática 2*/
+  float mini1 = -1, mini2 = -1, mini3 = -1, minitotal = -1, freqMat2 = -1;
+  int Mat2 = -1;
+  
+  while(restart == 1){
+    while(correctlogin != 1){
+      printf("Login - 0\nSign Up - 1\n");
+      scanf(" %d",&loginSignUP);
+      if(loginSignUP == 1){
+        saved = 0;
+        printf("Introduza o seu numero de aluno:\n");
+        scanf(" %d", &loginCredentials);
+        for(pos = 0; pos < 5 && saved != 1; pos++){
+          if(students[pos] == 0){
+            students[pos] = loginCredentials;
+            saved = 1;
+          }
+        }
+      }else if(loginSignUP == 0){
+          printf("Introduza o seu numero de aluno:\n");
+          scanf(" %d", &loginCredentials);
+          for(pos = 0; pos < 5; pos++){
+            if(students[pos] == loginCredentials){
+              correctlogin = 1;
+            }
+          }
+          if(correctlogin == 0){
+            printf("O aluno introduzido não existe!\n");
+          }   
+      }else{
+        printf("O valor introduzido é inválido!\n");
+      }
+      if(loginCredentials == 0){
+        correctlogin = 0;
+        printf("O aluno introduzido não existe!\n");
+      }
+    }
+    correctlogin = 0;
+    printf("Olá %d\n",loginCredentials);
+    printf("Queres calcular a nota para qual disciplina?\n");
+    printf(disciplinas);
+    scanf(" %d",&classChosen);
+    switch (classChosen){
+      case 0: 
+        exameAC = 0;
+        f1 = 0;
+        f2 = 0;
+        
+        printf("Qual foi a sua nota da Frequência 1 ?\n");
+        scanf(" %d", &f1); 
+        if(f1 >= 8){
+          printf("Foi a qual avaliação?\n 0 - Frequencia 2\n 1 - Exame\n");
+          scanf(" %d", &exameORfrequencia);
+          if(exameORfrequencia == 0){
+            printf("Qual foi a sua nota da Frequência 2 ?\n"); 
+            scanf(" %d", &f2);
+            if(f2 < 8){
+              printf("Você chumbou.\n\n");
+              break;
+            }
+          }else if ( exameORfrequencia == 1){
+            printf("Qual foi a sua nota no Exame ?\n");
+            scanf(" %d", &exameAC);
+            if(exameAC < 10){
+              printf("Você chumbou.\n\n");
+              break;
+            }
+          }else{
+            printf("O valor introduzido é inválido!\n");
+            break;
+          }
+        }else{
+            printf("Qual foi a sua nota no Exame ?\n");
+            scanf(" %d", &exameAC);
+            if(exameAC < 10){
+              printf("Você chumbou.\n\n");
+              break;
+            }
+        }
+                
+           
+        if(exameAC == 0){
+          acTeorica = (f1 + f2) / 2; 
+          if(acTeorica < 10){
+            printf("Você chumbou.\n\n");
+            break;
+          }
+        }else{
+          acTeorica = exameAC; 
+          if(acTeorica < 10){
+            printf("Você chumbou.\n\n");
+            break;
+          }
+        }
+        printf("Qual foi a sua nota no Trabalho 1 ?(max 5)\n");
+        scanf(" %d", &t1);
+        printf("Qual foi a sua nota no Trabalho 2 ?(max 5)\n");
+        scanf(" %d", &t2);
+        printf("Qual foi a sua nota no Trabalho 3 ?(max 5)\n");
+        scanf(" %d", &t3);
+        printf("Qual foi a sua nota no Trabalho 4 ?(max 5)\n");
+        scanf(" %d", &t4);
+        acPratica = t1 + t2 + t3 + t4;
+        if(acPratica < 10){
+          printf("Você chumbou.\n\n");
+            break;
+        }
+        ac = (acPratica + acTeorica) / 2; 
+        if(ac < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }else{
+          printf("O aluno %d, passou com a nota %d na Disciplina 'Arquitetura de Computadores'\n\n",loginCredentials, ac);
+          classes[0] = ac;
+          break;
+        }
+        break;
+      
+      case 1: 
+        
+        printf("Qual foi a sua nota da Frequência Final ?\n");
+        scanf(" %d", &exameAlgebra);
+        if(exameAlgebra < 8){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("Qual foi a sua nota no TPC 1 ?(max 4.5)\n");
+        scanf(" %f", &tpc1);
+        printf("Qual foi a sua nota no TPC 2 ?(max 4.5)\n");
+        scanf(" %f", &tpc2);
+        printf("Qual foi a sua nota no TPC 3 ?(max 5.5)\n");
+        scanf(" %f", &tpc3);
+        printf("Qual foi a sua nota no TPC 4 ?(max 5.5)\n");
+        scanf(" %f", &tpc4);
+        algebraPratica = tpc1 + tpc2 + tpc3 + tpc4;
+        algebraTotal = exameAlgebra * 0.6 + algebraPratica * 0.4;
+        if(algebraTotal < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("O aluno %d, passou com a nota %d na Disciplina 'Álgebra Linear'\n\n",loginCredentials, algebraTotal);
+        classes[1] = algebraTotal;
+        break;
+      case 2: 
+        printf("Qual foi a sua nota na Minificha 1 ?\n");
+        scanf(" %f", &minificha1);
+        printf("Qual foi a sua nota na Minificha 2 ?\n");
+        scanf(" %f", &minificha2);
+        printf("De 0 - 20, fez quantas Fichas do DropProject ?\n");
+        scanf(" %f", &fichasDropProject);
+        printf("Qual foi a sua nota na parte 1 do Projeto?\n");
+        scanf(" %f", &projetoParte1);
+        if(projetoParte1 < 8){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("Qual foi a sua nota na parte 2 do Projeto?\n");
+        scanf(" %f", &projetoParte2);
+        projetoTotal = (projetoParte1 * 0.25) + (projetoParte2 * 0.75);
+        praticaAED = (minificha1 * 0.125) + (minificha2 * 0.125) + (fichasDropProject * 0.1) + (projetoTotal * 0.65);
+        if(praticaAED < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("Qual foi a sua nota no TPC 1?\n");
+        scanf(" %f", &TPC1);
+        printf("Qual foi a sua nota no TPC 2?\n");
+        scanf(" %f", &TPC2);
+        printf("Qual foi a sua nota no TPC 3?\n");
+        scanf(" %f", &TPC3);
+        printf("Qual foi a sua nota no TPC 4?\n");
+        scanf(" %f", &TPC4);
+        TPCtotal = (TPC1 + TPC2 + TPC3 +TPC4) / 4;
+        printf("De 0 - 20, fez quantos Quizzes ?\n");
+        scanf(" %f", &quizzes);
+        printf("Qual foi a sua nota na Frequência 1 ?\n");
+        scanf(" %f", &AEDfrequencia1);
+        if(AEDfrequencia1 < 8){
+          printf("Qual foi a sua nota no Exame ?\n");
+          scanf(" %f", &AEDexame);
+          teoricaAED = AEDexame;
+        }else{
+          printf("Foi a qual avaliação?\n 0 - Frequencia 2\n 1 - Exame\n");
+          scanf(" %d", &AEDfreqORexam);
+          if(AEDfreqORexam == 0){
+            printf("Qual foi a sua nota na Frequência 2 ?\n");
+            scanf(" %f", &AEDfrequencia2);
+            if(AEDfrequencia2 < 8){
+              printf("Você chumbou.\n\n");
+              break;
+            }
+            teoricaAED = (AEDfrequencia1 * 0.4) + (AEDfrequencia2 * 0.4) + (quizzes * 0.1) + (TPCtotal * 0.1);
+            }else{
+            printf("Qual foi a sua nota no Exame ?\n");
+            scanf(" %f", &AEDexame);
+            teoricaAED = AEDexame;
+          }          
+        }
+        if(teoricaAED < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        AED = (teoricaAED * 0.4) + (praticaAED * 0.6); 
+        classes[2] = AED;
+        printf("O aluno %d, passou com a nota %d na Disciplina 'Algoritmia e Estrutura de Dados'\n\n",loginCredentials, AED);       
+        break;
+      case 3: 
+        printf("Qual foi a sua nota na Frequência ?\n");
+        scanf(" %d", &CCfrequencia);
+        printf("Qual foi a sua nota no Trabalho de Grupo ?\n");
+        scanf(" %d", &trabalhoDeGrupo);
+        printf("Qual foi a sua nota nos Trabalhos Individuais juntos ?\n");
+        scanf(" %d", &trabalhoIndividual);
+        CCtotal = (CCfrequencia * 0.3) + (trabalhoDeGrupo * 0.3) + ( trabalhoIndividual * 0.4);
+        if(CCtotal < 10){
+          printf("Qual foi a sua nota no Exame ?\n");
+          scanf(" %d", &CCexame);
+          CC = CCexame;
+        }else{
+          CC = CCtotal;
+        }
+        if(CC < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        } 
+        printf("O aluno %d, passou com a nota %d na Disciplina 'Competências Comportamentais'\n\n",loginCredentials, CC); 
+        classes[3] = CC;
+        break;
+      case 4:
+        printf("Qual foi a sua nota na Ficha 1 ?\n");
+        scanf(" %f", &F1);
+        printf("Qual foi a sua nota na Ficha 2 ?\n");
+        scanf(" %f", &F2);
+        printf("Qual foi a sua nota na Ficha 3 ?\n");
+        scanf(" %f", &F3);
+        printf("Qual foi a sua nota na Ficha 4 ?\n");
+        scanf(" %f", &F4);
+        printf("Qual foi a sua nota na Ficha 5 ?\n");
+        scanf(" %f", &F5);
+        printf("Qual foi a sua nota na Frequência ?\n");
+        scanf(" %d", &exameFisica);
+        totalFisica = (exameFisica * 0.7) + (F1 * 0.06) + (F2 * 0.06) + (F3 * 0.06) + (F4 * 0.06) + (F5 * 0.06);
+        if(totalFisica < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("O aluno %d, passou com a nota %d na Disciplina 'Física'\n\n",loginCredentials, totalFisica);
+        classes[4] = totalFisica;
+        break;
+      case 5:
+        printf("Qual foi a sua nota no EX0 ?\n");
+        scanf(" %f", &Ex0);
+        printf("Qual foi a sua nota no EX1 ?\n");
+        scanf(" %f", &Ex1);
+        printf("Qual foi a sua nota no EX2 ?\n");
+        scanf(" %f", &Ex2);
+        printf("Qual foi a sua nota no EX3 ?\n");
+        scanf(" %f", &Ex3);
+        printf("Qual foi a sua nota no EX4 ?\n");
+        scanf(" %f", &Ex4);
+        printf("Qual foi a sua nota no EX5 ?\n");
+        scanf(" %f", &Ex5);
+        printf("Qual foi a sua nota no github classroom ?\n");
+        scanf(" %f", &classroom);
+        printf("Qual foi a sua nota no Projeto ?\n");
+        scanf(" %f", &projeto);
+        if(projeto < 9){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        LPpratica = (Ex0 * 0.03) + (Ex1 * 0.05) + (Ex2 * 0.08) + (Ex3 * 0.08) + (Ex4 * 0.1) + (Ex5 * 0.16) + (classroom * 0.1) + (projeto * 0.4);
+        if(LPpratica < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("Qual foi a sua nota na Frequência 1 ?\n");
+        scanf(" %f", &LPfrequencia1);        
+        printf("Foi a qual avaliação?\n 0 - Frequencia 2\n 1 - Exame\n");
+        scanf(" %d", &LPfreqORexam);
+        if(LPfreqORexam == 0){
+          printf("Qual foi a sua nota na Frequência 2 ?\n");
+          scanf(" %f", &LPfrequencia2);
+          if(LPfrequencia2 < 9){
+            printf("Você chumbou.\n\n");
+            break;
+          }
+          LPteorica = (LPfrequencia1 * 0.45) + (LPfrequencia2 * 0.55);
+        }else{
+          printf("Qual foi a sua nota no Exame ?\n");
+          scanf(" %f", &LPexame);
+          LPteorica = LPexame;
+        }
+        LP = (LPteorica * 0.5) + (LPpratica * 0.5);
+        if(LP < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("O aluno %d, passou com a nota %d na Disciplina 'Linguagens de Programação 1'\n\n",loginCredentials, LP);
+        classes[5] = LP;    
+        break;
+      case 6:
+        printf("Qual foi a sua nota no Miniteste 1 ?\n");
+        scanf(" %f", &mini1);
+        printf("Qual foi a sua nota no Miniteste 2 ?\n");
+        scanf(" %f", &mini2);
+        printf("Qual foi a sua nota no Miniteste 3 ?\n");
+        scanf(" %f", &mini3);
+        minitotal = (mini1 + mini2 + mini3) / 3;
+        printf("Qual foi a sua nota na Frequência ?\n");
+        scanf(" %f", &freqMat2);
+        Mat2 = (minitotal * 0.3) + (freqMat2 * 0.7);
+        if(Mat2 < 10){
+          printf("Você chumbou.\n\n");
+          break;
+        }
+        printf("O aluno %d, passou com a nota %d na Disciplina 'Matemática 2'\n\n",loginCredentials, Mat2);
+        classes[6] = Mat2;
+        break;
+      default:
+        printf("O valor introduzido é inválido!\n");
+        break;
+    }
+    loop = 1;
+    while(loop == 1){
+      printf(restartMenu);
+      scanf(" %d", &option);
+      switch(option){
+        case 0:
+          loop = 0;
+          correctlogin = 1;
+          break;
+        case  1:
+          printf("Quer ver a nota de qual disciplina?\n");
+          printf(disciplinas);
+          scanf(" %d", &class);
+          printf("Teve a nota:\n %d\n", classes[class]);
+          break;
+        case 2:
+          loop = 0;
+          for(pos = 0; pos < 7; pos++){
+            classes[pos] = 0;
+          }
+          break;
+        case 3:
+          loop = 0;
+          restart = 0;
+          break;
+        default:
+          printf("O valor introduzido é inválido!\n");
+          break;
+      }
+    }
+  }
+	return 0;
+}
+
+

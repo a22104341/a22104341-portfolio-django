@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
-<body>
-
-</body>
-</html>
+{% block main %}
+<div class="container">
+    <div class="ProjectKeeper">
+        <div><a href="portfolio/images/ProjetoGrades.zip" download><img src="{% static 'portfolio/images/Project1.gif' %}"
+                                                                          class="Project1"></a></div>
+        <div>
+            <a href="https://09be0753-d9df-46c1-ba3f-948cd3982755.filesusr.com/ugd/ffc57f_2d32ec8a5be84176ac9d899bcc320926.pdf"
+               target="_blank"><img src="{% static 'portfolio/images/Project 2.png' %}" class="Project2"></a></div>
+        <div><a href="portfolio/images/ProjectLP1.txt" download><img src="{% static 'portfolio/images/Project 3.gif' %}"
+                                                                     class="Project3"></a></div>
+    </div>
+</div>
+{% endblock %}
