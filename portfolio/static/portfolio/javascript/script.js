@@ -164,10 +164,10 @@ function darkLightMode() {
     const progressbar2 = document.getElementById("progressbar2")
     const progressbar3 = document.getElementById("progressbar3")
 
-    if (darkLightButton.src.match("darkmodeImage/darkmode.png") /*|| !sessionStorage.getItem("darkmode")*/) {
-        darkLightButton.src = "darkmodeImage/lightmode.png"
-        backGroundMe.style.backgroundImage = 'url("backgroundImage/1.png")';
-        austria.style.backgroundImage = 'url("backgroundImage/Austria_Dark.png")'
+    if (darkLightButton.src.match("../images/darkmode.png") /*|| !sessionStorage.getItem("darkmode")*/) {
+        darkLightButton.src = "../images/lightmode.png"
+        backGroundMe.style.backgroundImage = 'url("../images/darkMe.png")'
+        austria.style.backgroundImage = 'url("../images/Austria_Dark.png")'
         bodyText.style.color = "white"
 
         nav.style.backgroundColor = "darkblue"
@@ -183,7 +183,7 @@ function darkLightMode() {
         f1.style.color = "white"
         f2.style.color = "white"
         f3.style.color = "white"
-        f4.src = "FooterImgs/Github_White.png"
+        f4.src = "../images/Github_White.png"
         f5.style.color = "white"
 
         phrase.style.backgroundColor = "darkblue"
@@ -207,9 +207,9 @@ function darkLightMode() {
 
         toggleDarkMode();
     } else {
-        darkLightButton.src = "darkmodeImage/darkmode.png"
-        backGroundMe.style.backgroundImage = 'url("backgroundImage/3.png")';
-        austria.style.backgroundImage = 'url("backgroundImage/Austria_White.png")'
+        darkLightButton.src = "../images/darkmode.png"
+        backGroundMe.style.backgroundImage = 'url("../images/backgroundME.png")';
+        austria.style.backgroundImage = 'url("../images/Austria_White.png")'
         bodyText.style.color = "black"
 
         nav.style.backgroundColor = "lightblue"
@@ -227,7 +227,7 @@ function darkLightMode() {
         f1.style.color = "black"
         f2.style.color = "black"
         f3.style.color = "black"
-        f4.src = "FooterImgs/Github.png"
+        f4.src = "../images/Github.png"
         f5.style.color = "black"
 
         phrase.style.backgroundColor = "lightblue"

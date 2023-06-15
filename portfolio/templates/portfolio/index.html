@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
 </head>
 {% block main %}
+{% load static %}
+{% block content %}
+<script src="{% static 'portfolio/javascript/script.js' %}"></script>
 <div class="container">
     <div class="backgroundME" id="backgroundME">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -82,4 +85,6 @@
 
     </article>
 </div>
-{% endblock %}
+
+{% endblock content %}
+{% endblock %}no
